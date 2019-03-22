@@ -42,4 +42,5 @@ function addComent(id, idetxt,idbtn){
     obj = document.getElementById(id);
     numero = obj.getElementsByTagName('p').length;
     document.getElementById(idbtn).innerHTML = "Comentarios("+numero+")";
+    document.getElementById(idetxt).value = "";
 }
