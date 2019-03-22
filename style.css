@@ -35,3 +35,19 @@ img{
 .etxtPost{
     width: 1000px;
 }
+
+.etxtComents{
+    width: 500px;
+}
+
+.divComents{
+    padding-left: 285px;
+}
+
+.divComents{
+    display: none;
+}
+
+.especificComents{
+    padding-left: 285px;
+}
