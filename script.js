@@ -20,7 +20,7 @@ function createDiv() {
     "'onclick=showComentsSection('coment"+i+"')>Comentarios(0)</button>"+
     "</div></div><div id='coment"+i+"' class='divComents'><b>Comentar: </b>"+
     "<input id='etxtComent"+(i)+"' class='etxtComents' type='text'>"+
-    "<button onclick=addComent('especificComents"+i+"','etxtComent"+(i)+"') id='btnComent"+(i)+"'>Comentar</button><div class='especificComents' id='especificComents"+(i++)+"'"+
+    "<button onclick=addComent('especificComents"+i+"','etxtComent"+(i)+"','buttonsPost"+(i)+"') id='btnComent"+(i)+"'>Comentar</button><div class='especificComents' id='especificComents"+(i++)+"'"+
     "></div></div><hr>";
 
 }
@@ -33,7 +33,13 @@ function showComentsSection(id){
     document.getElementById(id).style.display = "initial";
 }
 
-function addComent(id, idetxt){
+function addComent(id, idetxt,idbtn){
     var coment = document.getElementById(idetxt).value;
-    
+    var node = document.createElement("p");
+    var textnode = document.createTextNode("Comentario: " + coment);
+    node.appendChild(textnode);
+    document.getElementById(id).appendChild(node);
+    obj = document.getElementById(id);
+    numero = obj.getElementsByTagName('p').length;
+    document.getElementById(idbtn).innerHTML = "Comentarios("+numero+")";
 }
